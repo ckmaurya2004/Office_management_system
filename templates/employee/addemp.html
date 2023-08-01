@@ -1,0 +1,61 @@
+{% extends 'basic.html' %}
+{% block title %}
+
+{% endblock %}
+
+
+{% block body %}
+
+<div class="container my-4">
+  <h3>Add the employee</h3>
+  <form action="/employee/addemp/" method="post">{% csrf_token %}
+    <div class="form-group my-4">
+      <label for="name">First Name</label>
+      <input type="text" class="form-control" id="fname" name="fname" value="{{first_name}}"
+        placeholder="Enter Your  First Name">
+    </div>
+    <div class="form-group my-4">
+      <label for="name">last Name</label>
+      <input type="text" class="form-control" id="lname" name="lname" value="{{last_name}}"
+        placeholder="Enter Your  Last Name">
+    </div>
+
+    <div class="form-group my-4">
+      <label for="name">Phone</label>
+      <input type="tel" class="form-control" id="Phone" name="phone" value="{{phone}}"
+        placeholder="Enter Your Phone Number">
+    </div>
+    <div class="form-group my-4">
+      <label for="role">Role</label>
+      <input type="text" class="form-control" id="role" name="role" value="{{role}}" placeholder="Enter Your Role ">
+    </div>
+    <div class="form-group my-4">
+      <label for="dept">Dept</label>
+      <input type="text" class="form-control" id="dept" name="dept" value="{{dept}}"
+        placeholder="Enter Your Department ">
+    </div>
+    <div class="form-group my-4">
+      <label for="location">Location</label>
+      <input type="text" class="form-control" id="loaction" name="location" value="{{location}}"
+        placeholder="Enter Your Department ">
+    </div>
+
+    <div class="form-group my-4">
+      <div class="form-group my-4">
+        <label for="bonus">Bonus</label>
+        <input type="number" class="form-control" id="bonus" name="bonus" value="{{bonus}}"
+          laceholder="Enter Your Bonus ">
+      </div>
+      <label for="salary">Salary</label>
+      <input type="number" class="form-control" id="salary" name="salary" value="{{salary}}"
+        placeholder="Enter Your Salary ">
+    </div>
+    <button type="submit" class="btn btn-primary my-4">Submit</button>
+
+  </form>
+
+<a href="/employee"class = "btn btn-primary my-2">back</a>
+</div>
+
+
+{% endblock %}

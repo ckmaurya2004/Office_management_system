@@ -1,0 +1,32 @@
+{% extends 'basic.html' %}
+{% block title %}
+Welcom To Office manage system
+{% endblock  %}
+
+
+{% block body %}
+
+<div class="container my-4">
+    <h3>Employee's detail Filter</h3>
+    <form action="/employee/filteremp/" method="post">{% csrf_token %}
+      <div class="form-group my-4">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name"  name="name"  value = "{{first_name}}{{Last_name}}"placeholder="Enter Your  First Name">
+      </div>
+    
+     <div class="form-group my-4">
+      <label for="role">Role</label>
+      <input type="text" class="form-control" id="role"  name="role" value = "{{role}}" placeholder="Enter Your Role ">
+    </div>
+    <div class="form-group my-4">
+      <label for="dept">Dept</label>
+      <input type="text" class="form-control" id="dept"  name="dept" value = "{{dept}}" placeholder="Enter Your Department ">
+    </div>
+    <button type="submit" class="btn btn-success">Submit</button>
+
+
+  </form>
+
+  <a href="/employee"class = "btn btn-primary my-2">back</a>
+</div>
+    {% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'basic.html' %}
+{% block title %}
+Welcom To Office manage system
+{% endblock  %}
+
+
+{% block body %}
+<div class="container">
+<h1> Welcome To Office Management System </h1>
+
+    <a class="btn btn-primary my-4" href="/employee/totalemp" role="button">All Employee</a>
+    <a class="btn btn-primary my-4" href="/employee/addemp" role="button">Add Employee</a>
+    <a class="btn btn-primary my-4" href="/employee/removeemp" role="button"> Remove Employee</a>
+    <a class="btn btn-primary my-4" href="/employee/filteremp" role="button">Filter Employee</a>
+
+</div>
+
+    {% endblock %}

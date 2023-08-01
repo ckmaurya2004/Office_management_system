@@ -1,0 +1,22 @@
+{% extends 'basic.html' %}
+{% block title %} Welcome TO office management system {%endblock%}
+{% block body %} 
+    {% load static %}
+
+   
+      <div class="container mt-4">
+      <div class="jumbotron">
+        <h1 class="display-4">Welcome</h1>
+        <p class="lead">Welcome to my  employee management system project</p>
+        <img src="/static/images/emp1.jpeg" class="image mx-4">
+        <img src="/static/images/emp2.png " class="image mx-4" height="200px" width=" 200px" >
+        <hr class="my-4">
+        <p>  click this button and enterd into this project</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="/employee" role="button">Employee Management</a>
+        </p>
+      </div>
+      </div>
+      {%endblock%}
+
+    

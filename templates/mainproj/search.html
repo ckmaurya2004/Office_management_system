@@ -1,0 +1,48 @@
+
+{% extends 'basic.html' %}
+{% block title %}
+search
+{% endblock  %}
+
+
+{% block body %}
+
+<div class="container my-4">
+    <h3> All Employee's Details</h3>
+<table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">First_Name</th>
+        <th scope="col">Last_Name</th>  
+        <th scope="col">Phone_no</th>  
+        <th scope="col">Role</th>
+        <th scope="col">Dept</th>
+        <th scope="col">Location</th>
+        <th scope="col">Bonaus</th>
+        <th scope="col">Salary</th>
+       
+      </tr>
+    </thead>
+    {% for emp in allemp %}
+    <tbody>
+   
+      <tr>
+       <th scope= "row">{{emp.id}}</th>
+        <td>{{emp.first_name}}</td>
+        <td>{{emp.last_name}}</td>
+        <td>{{emp.phone}}</td>
+        <td>{{emp.role_name}}</td>
+        <td>{{emp.dept_name}}</td>
+        <td>{{emp.location}}</td>
+        <td>{{emp.bonus}}</td>
+        <td>{{emp.salary}}</td>
+
+      </tr>
+    </tbody>
+    {% endfor%}
+  </table>
+  <a href="/employee"class = "btn btn-primary my-2">back</a>
+</div>
+
+    {% endblock %}
